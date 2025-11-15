@@ -1,0 +1,185 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #e2e8f0;
+    transition: background 0.5s, color 0.5s;
+}
+
+/* ✨ Professional Background (Dark Navy) */
+.gradient-bg {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Floating subtle glow circles */
+.float-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.2;
+}
+
+.c1 { width: 220px; height: 220px; background: #334155; top: 8%; left: 5%; }
+.c2 { width: 180px; height: 180px; background: #1e293b; top: 40%; left: 75%; }
+.c3 { width: 150px; height: 150px; background: #475569; top: 75%; left: 20%; }
+
+/* Smooth floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-25px); }
+    100% { transform: translateY(0px); }
+}
+
+.float-circle {
+    animation: float 10s infinite ease-in-out;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.03);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.navbar .logo {
+    font-weight: 600;
+    font-size: 24px;
+    color: #f1f5f9;
+}
+
+.navbar a {
+    color: #e2e8f0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #38bdf8; /* subtle blue */
+}
+
+#toggleTheme {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.profile-pic {
+    width: 160px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.15);
+    box-shadow: 0 0 30px rgba(255,255,255,0.08);
+    margin-bottom: 20px;
+}
+
+/* Glassmorphism Card */
+.glass-box,
+.glass-container {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    width: 65%;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f8fafc;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Buttons */
+.btn,
+.btn2 {
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
+
+.btn2 {
+    background: transparent;
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+}
+
+.btn2:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+/* Bio-data table */
+.bio-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bio-table th,
+.bio-table td {
+    padding: 15px;
+    color: #f1f5f9;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.bio-table th {
+    text-align: left;
+    width: 30%;
+    opacity: 0.9;
+}
+
+/* Resume section lists */
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #0a0f1a;
+    color: #e2e8f0;
+}
+
+.dark-mode .glass-box,
+.dark-mode .glass-container {
+    background: rgba(255,255,255,0.05);
+}
